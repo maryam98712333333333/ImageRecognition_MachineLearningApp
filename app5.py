@@ -9,7 +9,7 @@ from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 os.makedirs('dataset/cats', exist_ok=True)
 os.makedirs('dataset/dogs', exist_ok=True)
 
-image = cv2.imread('E:\Fiverr\Sanad112\images\Abyssinian_1.jpg')
+image = cv2.imread('./images/Abyssinian_1.jpg')
 
 # Check if the image is loaded successfully
 if image is not None:
@@ -60,7 +60,7 @@ train_data_gen = image_generator.flow_from_directory(
 model.fit(train_data_gen, epochs=10)
 
 # Load and preprocess a new image
-new_image = cv2.imread('E:\Fiverr\Sanad112\images\Abyssinian_1.jpg')
+new_image = cv2.imread('./images/Abyssinian_1.jpg')
 new_image = cv2.resize(new_image, (100, 100))
 new_image = np.expand_dims(new_image, axis=0) / 255.0
 
