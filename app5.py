@@ -67,6 +67,6 @@ new_image = np.expand_dims(new_image, axis=0) / 255.0
 # Classify the new image
 prediction = model.predict(new_image)
 if prediction[0] > 0.5:
-    print("It's a Cat! ------- Machine Learning Identified Image ")
+    print("It's a DOG! ------- Machine Learning Identified Image ")
 else:
-    print("It's a Dog! ------- Machine Learning Identified Image ")
+    print("It's a CAT! ------- Machine Learning Identified Image ")
